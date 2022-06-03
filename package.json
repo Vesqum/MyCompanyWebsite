@@ -13,9 +13,9 @@
   "author": "Marcin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vesqum/myCompany/issues"
+    "url": "https://github.com/Vesqum/MyCompanyWebsite/issues"
   },
-  "homepage": "https://github.com/Vesqum/myCompany#readme",
+  "homepage": "https://github.com/Vesqum/MyCompanyWebsite#readme",
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",

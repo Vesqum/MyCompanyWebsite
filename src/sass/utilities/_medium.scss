@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+
+    .offers {
+        
+        &__cards {
+            flex-direction: row !important;
+            justify-content: center;
+            align-items: center;
+        }
+        &__card {
+            
+            &-img {
+                height: 100%;
+                
+            }
+            
+        }
+    
+        
+    }
+
+    .section-heading {
+        font-size: 4rem;
+    }
+    .section-padding {
+        
+        padding: 7em 2em;
+    }
+}

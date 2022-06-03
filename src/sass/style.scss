@@ -1,0 +1,489 @@
+@use 'utilities/large';
+@use 'utilities/medium';
+@use 'utilities/small';
+@use 'utilities/colors' as *;
+@use 'utilities/components';
+@use 'utilities/animation';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+}
+
+
+
+/* --- Menu Bars ------------------------------------ */
+.overlay {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    
+
+
+    &-active {
+        transition: all .8s ease-in;
+        transform: translateX(0);
+    }
+    &-off {
+        transition: all .8s ease-in-out linear;
+        
+        transform: translateX(-100vw);
+    }
+    
+
+    .nav {
+        height: 100vh;
+        &__items {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            height: 100vh;
+            
+            &-item {
+                height: 20%;
+                overflow: hidden;
+    
+                &:nth-last-of-type(5) {
+                    background-color: $navColor1;
+                }
+                &:nth-last-of-type(4) {
+                    background-color: $navColor2;
+                }
+                &:nth-last-of-type(3) {
+                    background-color: $navColor3;
+                }
+                &:nth-last-of-type(2) {
+                    background-color: $navColor4;
+                }
+                &:nth-last-of-type(1) {
+                    background-color: $navColor5;
+                }
+    
+                a {
+                    position: relative;
+                    top: 45%;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    display: block;
+                    text-align: center;
+                    font-size: 1.8rem;
+                    color: $primaryColor;
+                    transition: transform .4s ease-in-out;
+                    &:hover {
+                        transform: scale(1.2);
+                    } 
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 47%;
+                        left: 0;
+                        width: 25vw;
+                        height: 3px;
+                        background-color: $primaryColor;
+                        transition: opacity .3s linear;
+                        opacity: 0;
+                    }
+                    &:hover::before {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .slide-in-1 {
+                animation: slide-in .4s linear 0.2s both;
+            }
+            .slide-in-2 {
+                animation: slide-in .5s linear 0.2s both;
+            }
+            .slide-in-3 {
+                animation: slide-in .6s linear 0.2s both;
+            }
+            .slide-in-4 {
+                animation: slide-in .8s linear 0.2s both;
+            }
+            .slide-in-5 {
+                animation: slide-in 1s linear 0.2s both;
+            }
+            .slide-out-1 {
+                animation: slide-out .4s linear 0.2s both;
+            }
+            .slide-out-2 {
+                animation: slide-out .2s linear 0.2s both;
+            }
+            .slide-out-3 {
+                animation: slide-out .1s linear 0.2s both;
+            }
+            .slide-out-4 {
+                animation: slide-out .4s linear 0.2s both;
+            }
+            .slide-out-5 {
+                animation: slide-out .4s linear 0.2s both;
+            }
+    
+        }
+    }
+}
+
+.menu-bars {
+    position: fixed;
+    top: 1.5rem;
+    right: 2.5rem;
+    z-index: 100;
+    display: inline;
+    cursor: pointer;
+
+    &__1,
+    &__2,
+    &__3 {
+        width: 45px;
+        height: 2.5px;
+        background-color: #fff;
+        margin: 0.8em 0;
+        transition: all .4s;
+    }
+  }
+
+// header-------------
+.header {
+    position: relative;
+    background-image: url('/dist/img/hero-img-small.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(90%);
+    perspective: 800px;
+    transition: all .8s  linear;
+    &:hover {
+        filter: grayscale(20%);
+    }
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: showText 1s ease-in-out;
+
+        
+        
+    }
+    &__heading {
+        font-size: 4rem;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        z-index: 10;
+        
+    }
+    &__text {
+        font-size: 1.8rem;
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        z-index: 2;
+    }
+    &__btn {
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 1em 3em;
+        margin-top: 1em;
+        border: 1px solid #000;
+        border-radius: 15px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primaryColor;
+        transition: all .4s ease-in-out;
+        z-index: 10;
+        &:hover {
+            // color: $navColor4;
+            background-color: $navColor3;
+            border: none;
+            
+        }
+    }
+
+
+    &__logo {
+        position: absolute;
+        top: 1.5em;
+        left: 1.5em;
+        text-decoration: none;
+        z-index: 2;
+
+        span {
+            display: inline-block;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 3px #000;
+            animation: rotate-logo 2s linear forwards;
+            
+        }
+        span:nth-child(1) {
+            
+            color: $navColor1;
+            animation-delay: 1s;
+        }
+        span:nth-child(2) {
+            color: $navColor2;
+            animation-delay: 1.4s;
+        }
+        span:nth-child(3) {
+            color: $navColor3;
+            animation-delay: 1.8s;
+        }
+        span:nth-child(4) {
+            color: $navColor4;
+            animation-delay: 1.8s;
+        }
+        span:nth-child(5) {
+            
+            color: $navColor5;
+            animation-delay: 1s;
+        }
+        span:nth-child(6) {
+            color: $navColor1;
+            animation-delay: 2s;
+        }
+        span:nth-child(7) {
+            color: $navColor2;
+            animation-delay: 2.2s;
+        }
+        span:nth-child(8) {
+            color: $navColor3;
+            animation-delay: 2.4s;
+        }
+        span:nth-child(9) {
+            color: $navColor2;
+            animation-delay: 2.2s;
+        }
+        span:nth-child(10) {
+            color: $navColor3;
+            animation-delay: 2.4s;
+        }
+    }
+    &__arrow {
+        display: block;
+        position: absolute;
+        bottom: 3em;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 4px solid $navColor1;
+        border-radius: 50%;
+        padding: 2em;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid $navColor1;
+            border-radius: 50%;
+            content: '';
+            animation: pulse 2s infinite 0.2s linear;
+        }
+    }
+    &__arrow-icon {
+        width: 30px;
+        
+    }
+
+
+
+}
+
+// About
+.about {
+    background-color: $navColor2;
+    &__box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        padding: 2em;
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            border: 1px solid $navColor1;
+            content: '';
+            transition: all .8s ease-in-out ;
+            
+        }
+        &:hover::before {
+            width: 100%;
+            border: 5px solid $navColor1;
+            animation: pulse 1s infinite;
+        }
+        &:hover::after {
+            height: 100%;
+            border: 5px solid $navColor1;
+            animation: pulse 1s infinite;
+        }
+        &-text {
+            margin-bottom: 2.5em;
+            &--about {
+                font-size: 1.6rem;
+                margin-bottom: 0.6em;
+            }
+        }
+        img {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+}
+
+// Offert
+.offers {
+    background-color: $navColor3;
+    overflow: hidden;
+    &__cards {
+        
+    }
+    &__card {
+        position: relative;
+        height: 600px;
+        width: auto;
+        margin: 14em 2em;
+        color: $primaryColor;
+        text-align: center;
+        perspective: 1000px;
+
+        &:hover {
+            .offers__card-img {
+                transform: rotateY(-100deg);
+                opacity: 0;
+            }
+            .offers__card-info {
+                transform: rotateY(0);
+                opacity: 1;
+            }
+        }
+        &-img {
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            border-radius: 15px;
+            transition: transform .3s, opacity .3s;
+            p {
+                position: absolute;
+                top: 20px;
+                right: 2px;
+                padding: 0.5em;
+                cursor: pointer;
+                i {
+                    margin-right: 0.5em;
+                }
+            }
+            h3 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-family:'Nunito', sans-serif;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+            }
+            
+            &--first {
+                background-image:$linear-btn ,url('/dist/img/offers1.jpg');
+            }
+            &--second {
+                background-image:$linear-btn ,url('/dist/img/offers2.jpg');
+            }
+            &--third {
+                background-image:$linear-btn ,url('/dist/img/offers2.jpg');
+            }
+        }
+
+        &-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            background-image: $linear-btn;
+            justify-content: center;
+            border-radius: 15px;
+            opacity: 0;
+            transform: rotateY(100deg);
+            transition: transform 1s, opacity 1s;
+
+            h3 {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 1.2em;
+                font-family:'Nunito', sans-serif;
+            }
+            &-list {
+                margin: 0 auto;
+                width: 70%;
+
+                &-item {
+                    padding: 1em;
+                    font-size: 1.4em;
+                    border-bottom: 1px solid $primaryColor;
+                }
+                &-item:last-child {
+                    border: none;
+                }
+            }
+            &-btn {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 2em;
+                padding: 1em;
+                border-radius: 8px;
+                width: 80%;
+                border: none;
+                color: $primaryColor;
+                background-color: $navColor2;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #872a25;
+                }
+            }
+        }
+    }
+}
+// Portfolio
+#portfolio {
+    background-color: $navColor4;
+}
+// Contact
+
+#contact {
+    background-color: $navColor5;
+}
+
+// Footer
+

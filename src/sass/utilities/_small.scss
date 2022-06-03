@@ -1,0 +1,40 @@
+@media (min-width: 576px) {
+    .menu-bars {
+        top: 1rem;
+        right: 2rem;
+      }
+    .about {
+        
+        &__box {
+          flex-direction: row !important;
+          justify-content: start;
+          align-items: stretch;
+            // display: grid;
+            // grid-template-columns: repeat(2, 1fr) !important;
+            // gap: 2em;
+            margin-top: 3px;
+            &-text {
+              margin: 5em 4em; 
+              
+                &--about {
+                    font-size: 2rem !important;
+                    margin-bottom: 0.8em;
+                }
+                p{
+                  font-size: 1.2rem;
+                }
+                &--1 {
+                  justify-items: left;
+                }
+                &--2 {
+                  justify-items: right;
+                  order: 1;
+                }
+            }
+            img {
+                width: 100%;
+                max-width: 400px !important;
+            }
+        }
+    }
+}

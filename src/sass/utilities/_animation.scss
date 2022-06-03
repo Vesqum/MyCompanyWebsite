@@ -1,0 +1,53 @@
+@keyframes rotate-logo {
+    from {
+        transform: rotateY(90deg);
+        filter: blur(8px);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide-in {
+    from{
+      transform: translateX(-100%);
+    }
+    to{
+      transform: translateX(0);
+    }
+} 
+
+@keyframes slide-out {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+} 
+
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes showText {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
