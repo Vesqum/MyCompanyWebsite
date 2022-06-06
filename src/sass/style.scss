@@ -362,13 +362,17 @@ body {
     background-color: $navColor3;
     overflow: hidden;
     &__cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         
     }
     &__card {
         position: relative;
         height: 600px;
-        width: auto;
-        margin: 14em 2em;
+        width: 100%;
+        margin: 2em 2em;
         color: $primaryColor;
         text-align: center;
         perspective: 1000px;
@@ -473,6 +477,10 @@ body {
                 }
             }
         }
+    }
+    .section-icon-square,
+    .section-icon-x {
+        display: none;
     }
 }
 // Portfolio

@@ -30,6 +30,13 @@
         item.addEventListener('click', toogleNav)
     })
     menuBars.addEventListener('click', toogleNav)
+
+    const footerYear = document.querySelector('.footer__year')
+    function currentYear() {
+        const currentYearDate = (new Date).getFullYear();
+        footerYear.innerText = currentYearDate;
+    }
+    currentYear()
 })()
 
 

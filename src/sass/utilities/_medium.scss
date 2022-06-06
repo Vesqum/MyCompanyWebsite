@@ -1,23 +1,61 @@
 @media (min-width: 768px) {
-
     .offers {
-        
+        position: relative;
         &__cards {
             flex-direction: row !important;
             justify-content: center;
             align-items: center;
+            
         }
         &__card {
-            
+            z-index: 1;
             &-img {
                 height: 100%;
                 
             }
+        }
+        .section-icon-square,
+        .section-icon-x,
+        .section-icon-square-1, 
+        .section-icon-x-1  {
+            position: absolute;
+            display: block !important;
             
         }
-    
-        
+        .section-icon-square {
+            top: 8%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            animation: iconRotateRight 60s infinite linear;
+        }
+        .section-icon-x {
+            bottom: 5%;
+            right: 10%;
+            width: 250px;
+            height: 250px;
+            animation: iconRotateLeft 40s infinite linear;
+          
+        }
+        .section-icon-square-1 {
+            top: 4%;
+            right: 0;
+            width: 250px;
+            height: 250px;
+            animation: iconRotateLeft 60s infinite linear;
+            z-index: 2;
+        }
+        .section-icon-x-1 {
+            bottom: 5%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            animation: iconRotateRight 40s infinite linear;
+            // z-index: 100;
+        }
+
     }
+
 
     .section-heading {
         font-size: 4rem;

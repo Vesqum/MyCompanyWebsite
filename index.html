@@ -36,7 +36,7 @@
             <li id="nav1" class="nav__items-item slide-out-1"><a href="#home">Home</a></li>
             <li id="nav3" class="nav__items-item slide-out-3"><a href="#about">O nas</a></li>
             <li id="nav2" class="nav__items-item slide-out-2"><a href="#offers">Oferta</a></li>
-            <li id="nav4" class="nav__items-item slide-out-4"><a href="#portfolio">portfolio</a></li>
+            <li id="nav4" class="nav__items-item slide-out-4"><a href="#gallery">gallery</a></li>
             <li id="nav5" class="nav__items-item slide-out-5"><a href="#contact">Kontakt</a></li>
         </ul>
     </nav>
@@ -130,15 +130,17 @@
 					</div>
 				</div>
 			</section>
-			<section class="offers section change-section section-padding" id="offers">
+			<section
+				class="offers section change-section section-padding"
+				id="offers"
+			>
 				<h2 class="section-heading">Nasza Oferta</h2>
 				<div class="wrapper">
-
 					<div class="offers__cards">
 						<div class="offers__card" onclick="void(0)">
 							<div class="offers__card-img offers__card-img--first">
-								<h3 class="offers__card-title">Strona od podstaw</h3>
-								<p class="offers__card-info">
+								<h3 class="offers__card-img-title">Strona od podstaw</h3>
+								<p class="offers__card-img-info">
 									<i class="fas fa-angle-double-right"></i>Więcej informacji
 								</p>
 							</div>
@@ -159,8 +161,8 @@
 
 						<div class="offers__card" onclick="void(0)">
 							<div class="offers__card-img offers__card-img--second">
-								<h3 class="offers__card-title">Strona od podstaw</h3>
-								<p class="offers__card-info">
+								<h3 class="offers__card-img-title">Strona od podstaw</h3>
+								<p class="offers__card-img-info">
 									<i class="fas fa-angle-double-right"></i>Więcej informacji
 								</p>
 							</div>
@@ -200,15 +202,96 @@
 								</button>
 							</div>
 						</div>
-
-						
+					</div>
+				</div>
+				<img class="section-icon-square-1" src="/dist/img/icons/square.svg" alt="">
+				<img class="section-icon-square" src="/dist/img/icons/square.svg" alt="">
+				<img class="section-icon-x" src="/dist/img/icons/x.svg" alt="">
+				<img class="section-icon-x-1" src="/dist/img/icons/x.svg" alt="">
+			</section>
+			<section class="gallery section change-section" id="gallery">
+				<h2 class="section-heading">Gallery</h2>
+				<div class="wrapper">
+					<div class="gallery__boxes">
+						<div class="gallery__box">
+							<div class="gallery__box-img">
+								<img src="" alt="">
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section change-section" id="portfolio"></section>
 			<section class="section change-section" id="contact"></section>
 		</main>
-		<footer>
-    <p>Footer</p>
-</footer>	</body>
+		<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__boxes">
+            <div class="footer__box">
+                <h3 class="footer__box-title">Marcin</h3>
+                <p class="footer__box-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+                    impedit id repellendus rem eius quibusdam rerum delectus est illo
+                    a?Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                    suscipit hic iusto voluptatem libero incidunt alias totam nam rem.
+                    Libero.
+                </p>
+                <div class="footer__box-social">
+                    <a href="#" class="footer__box-link"
+                        ><i class="fab fa-twitter-square"></i
+                    ></a>
+                    <a href="#" class="footer__box-link"
+                        ><i class="fab fa-facebook-square"></i
+                    ></a>
+                    <a href="#" class="footer__box-link"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                </div>
+            </div>
+
+            <div class="footer__box footer__box-desktop">
+                <h3 class="footer__box-title">Klmatyzacje</h3>
+                <ul class="footer__box-list">
+                    <li class="footer__box-list-item">
+                        <a href="#">klimatyzacje scienne</a>
+                    </li>
+                    <li class="footer__box-list-item">
+                        <a href="#">klimatyzacje podsufitowe</a>
+                    </li>
+                    <li class="footer__box-list-item">
+                        <a href="#">klimatyzacje scienne</a>
+                    </li>
+                    <li class="footer__box-list-item">
+                        <a href="#">klimatyzacje scienne</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__box footer__box-desktop">
+                <h3 class="footer__box-title">O firmie</h3>
+                <ul class="footer__box-list">
+                    <li class="footer__box-list-item"><a href="#">O nas </a></li>
+                    <li class="footer__box-list-item"><a href="#">Zarzad</a></li>
+                    <li class="footer__box-list-item"><a href="#">Kariera</a></li>
+                    <li class="footer__box-list-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <p class="footer__bottom-text">
+        &copy; <span class="footer__year"></span>
+    </p>
+</footer>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+	</body>
 </html>
