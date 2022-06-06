@@ -483,9 +483,37 @@ body {
         display: none;
     }
 }
-// Portfolio
-#portfolio {
+// Gallery
+.gallery {
     background-color: $navColor4;
+
+    &__box {
+        position: relative;
+        margin: 2em;
+        padding: 3em;
+        border-radius: 15px;
+        background-color: $navColor3;
+        box-shadow: 3px 3px 10px $navColor3;
+        transition: tranform .3s;
+
+        &:hover {
+            transform: scale(.95);
+        }
+        &-img {
+            img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                
+            }
+        }
+        &-text {
+            margin-bottom: 0.5em;
+            font-size: 1.4rem;
+            text-align: left;
+        }
+    }
+
 }
 // Contact
 
