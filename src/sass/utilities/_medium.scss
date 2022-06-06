@@ -56,6 +56,75 @@
 
     }
 
+    .contact {
+        
+        
+        &__in {
+            display: flex;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            padding: 1em;
+            
+            &-map {
+                width: 100%;
+                height: auto;
+                flex: 50%;
+                margin: 2.5em 2.5em;
+            }
+            
+            &-form {
+    
+                h3 {
+                    font-size: 2.5rem;
+                    
+                }
+                &-text {
+                
+                    padding: 1.5em;
+                }
+                
+                &-btn {
+                    padding: 2em 0;
+                    
+                }
+            }
+        }
+    }
+    .footer {
+        
+        .wrapper {
+            padding: 6em 2em 2em;
+        }
+        &__boxes {
+            display: flex;
+            justify-content: space-around;
+        }
+        &__box {
+            width: 25%;
+            margin: 0 2em;
+            &:first-child {
+                width: 50%;
+            }
+        }
+        &__box-desktop {
+            display: block !important;
+            text-decoration: none;
+        }
+        &__box-title {
+            font-size: 2.6rem;
+        }
+        &__box-list {
+            list-style: none;
+        }
+        &__box-text {
+            font-size: 1.6rem;
+        }
+       &__box-list-item {
+           margin-bottom: 1em;
+       }
+        
+    }
+
 
     .section-heading {
         font-size: 4rem;
